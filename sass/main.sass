@@ -2,13 +2,14 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+    transition: 0.3s 
     a, a:link
         color: #ffffff
         text-decoration: none
     input
         outline: none
-body 
-    border: 15px solid #ffffff
+/* body
+    border: 15px solid #ffffff */
 @mixin josefin-bold
     font-family: 'Josefin Sans', sans-serif
     font-weight: 700
@@ -21,7 +22,7 @@ body
 @mixin aleo
     font-family: 'Aleo Bold', sans-serif
     font-weight: 250
-    
+
 .first-section
     background: url(../img/bg-toper.png)
     background-size: cover
@@ -40,20 +41,20 @@ body
             color: #ffffff
             text-transform: uppercase
             letter-spacing: 2px
-            margin-top: 265px 
-            margin-bottom: 0             
+            margin-top: 265px
+            margin-bottom: 0
         .sub-title__text
             @include josefin-regular
-            font-size: 22px 
+            font-size: 22px
             color: #ffffff
             margin-bottom: 45px
             letter-spacing: 4.3px
         .search-form
             position: relative
             [type="search"]
-                width: 650px    
+                width: 650px
                 height: 60px
-                padding-left: 105px 
+                padding-left: 105px
                 &::placeholder
                     @include josefin-regular
                     font-size: 14px
@@ -68,19 +69,25 @@ body
                 text-transform: uppercase
                 color: #fff
                 background: #5474fd
-                background-image: url(../icon/search.svg) 
+                background-image: url(../icon/search.svg)
                 background-repeat: no-repeat
                 background-position: 110px 12px
                 outline: none
                 border: 0
                 @include aleo
                 font-size: 16px
+                cursor: pointer
+                &:active
+                    transform: scale(0.98)
+                &:hover
+                    box-shadow: 1px 1px 5px 3px  #b8b8b1
+                        
         .scroll-down
             margin-top: 120px
             margin-bottom: 120px
             .text
                 @include josefin-regular
-                font-size: 14px 
+                font-size: 14px
                 letter-spacing: 2px
     &__footer
         background: #5474fd
@@ -93,7 +100,7 @@ body
             align-items: center
             .bottom__title
                 @include josefin-bold
-                font-size: 24px 
+                font-size: 24px
                 text-transform: uppercase
                 color: #ffffff
                 padding: 30px 0 26px 0
@@ -101,21 +108,24 @@ body
             .menu
                 display: flex
                 flex-direction: row
-                flex-wrap: nowrap   
+                flex-wrap: nowrap
                 justify-content: flex-start
                 align-items: center
-                
+
                 &__list
                     list-style-type: none
                 &__item
                     display: inline
-                    padding: 30px 35px 30px 0
+                    margin: 30px 35px 30px 0
                     color: #ffffff
                     text-transform: uppercase
                     font-family: 'Aleo Bold', sans-serif
                     font-weight: 400
                     font-size: 14px
-/* First section compleate */
+                    &:hover
+                        border-top: 2px solid #ffffff
+                        transition: 0.3s ease 0.2s
+
 .why-choose
     &__conteiner
         background: url(../img/bg-second-2.png) no-repeat
@@ -141,31 +151,35 @@ body
                 font-size: 16px
                 line-height: 26px
                 letter-spacing: 0.7px
-                margin-bottom: 30px 
+                margin-bottom: 30px
             [type="button"]
                 height: 60px
                 width: 225px
                 text-transform: uppercase
                 color: #fff
                 background-color: #4463f0
-                background-image: linear-gradient(45deg, transparent 45%, #496bfe 30%, #5474fd) 
+                background-image: linear-gradient(45deg, transparent 45%, #496bfe 30%, #5474fd)
                 outline: none
                 border: 0
                 @include aleo
                 font-size: 16px
                 cursor: pointer
+                &:active
+                    transform: scale(0.98)
+                &:hover
+                    box-shadow: 1px 1px 5px 3px  #b8b8b1
         .img__conteiner
             display: flex
-            width: 540px    
-            flex-direction: column  
+            width: 540px
+            flex-direction: column
             justify-content: center
             align-items: center
-            margin-top: 120px   
-            margin-bottom: 130px    
+            margin-top: 120px
+            margin-bottom: 130px
             .img__item1
                 align-self: flex-start
                 margin-bottom: 5px
-                margin-left: 65px   
+                margin-left: 65px
             .img__item2
                 align-self: flex-end
 .why-choose__bottom
@@ -173,29 +187,33 @@ body
     background-image: url(../img/shaper-line.png)
     background-repeat: no-repeat
     background-position: 50% 40%
-      
+
     &--wrapper
         max-width: 1110px
         margin: 0 auto
         display: flex
         justify-content: space-around
         align-items: center
-    &--icon 
+    &--icon
         margin-top: 95px
-        margin-bottom: 110px    
-        color: #fff 
+        margin-bottom: 110px
+        color: #fff
         @include aleo
         font-size: 36px
         text-align: center
         background: #333333
         border-radius: 50%
-/* Theird-section styling */
+        cursor: pointer
+        &:active img
+            transform: scale(1.15)
+            
+
 .third-section
-    background-image: url(../img/bg-third.png) 
+    background-image: url(../img/bg-third.png)
     background-repeat: no-repeat
     &__wrapper
         max-width: 1110px
-        margin: 0 auto  
+        margin: 0 auto
         display: flex
         justify-content: flex-start
         align-items: center
@@ -208,36 +226,40 @@ body
             color: #ffffff
             margin: 120px 0 100px 0
             .country
-                font-size: 20px 
-                margin: 40px 0 30px 30px   
+                font-size: 20px
+                margin: 40px 0 30px 30px
             .title
                 font-size: 20px
                 margin-left: 30px
-                text-transform: uppercase   
+                text-transform: uppercase
             .text
                 font-size: 14px
                 margin: 30px
-                line-height: 26px   
+                line-height: 26px
             [type="button"]
                 height: 60px
                 width: 225px
                 text-transform: uppercase
                 color: #fff
                 background-color: #4463f0
-                background-image: linear-gradient(45deg, transparent 45%, #496bfe 30%, #5474fd) 
+                background-image: linear-gradient(45deg, transparent 45%, #496bfe 30%, #5474fd)
                 outline: none
                 border: 0
                 @include aleo
                 font-size: 16px
                 cursor: pointer
                 margin-left: 30px
-/* Fourth-section styling */
+                &:active
+                    transform: scale(0.98)
+                &:hover
+                    box-shadow: 1px 1px 5px 3px  #b8b8b1
+
 .fourth-section
-    background-image: url(../img/bg-fourth.png) 
+    background-image: url(../img/bg-fourth.png)
     background-repeat: no-repeat
     &__wrapper
         max-width: 1110px
-        margin: 0 auto  
+        margin: 0 auto
         display: flex
         justify-content: flex-end
         align-items: center
@@ -250,30 +272,34 @@ body
             color: #ffffff
             margin: 120px 0 100px 0
             .country
-                font-size: 20px 
-                margin: 40px 0 30px 30px   
+                font-size: 20px
+                margin: 40px 0 30px 30px
             .title
                 font-size: 20px
                 margin-left: 30px
-                text-transform: uppercase   
+                text-transform: uppercase
             .text
                 font-size: 14px
                 margin: 30px
-                line-height: 26px   
+                line-height: 26px
             [type="button"]
                 height: 60px
                 width: 225px
                 text-transform: uppercase
                 color: #fff
                 background-color: #4463f0
-                background-image: linear-gradient(45deg, transparent 45%, #496bfe 30%, #5474fd) 
+                background-image: linear-gradient(45deg, transparent 45%, #496bfe 30%, #5474fd)
                 outline: none
                 border: 0
                 @include aleo
                 font-size: 16px
                 cursor: pointer
                 margin-left: 30px
-/* Last-section styling */
+                &:active
+                    transform: scale(0.98)
+                &:hover
+                    box-shadow: 1px 1px 4px 3px  #b8b8b1
+
 .last-section
     background: url(../img/bg-bottom.png) no-repeat
     background-size: cover
@@ -282,43 +308,81 @@ body
         margin: 0 auto
         display: flex
         flex-direction: row
-        flex-wrap: wrap  
+        flex-wrap: wrap
         justify-content: center
         align-items: center
         .title
             display: block
-            width: 400px    
+            width: 400px
             text-align: center
             font-size: 36px
             color: #ffffff
             margin-top: 120px
             margin-bottom: 100px
     &__conteiner
-        display: flex   
-        .img__description   
+        display: flex
+        flex-wrap: wrap 
+        margin-bottom: 200px
+        .img__description
             @include josefin-regular
             background-color: #333333
             color: #ffffff
+            width: 665px
+            height: 284px
+
             .tourist-name
                 font-size: 20px
-                text-transform: uppercase 
-                margin-left: 60px
-                margin-top: 50px   
-            .text   
-                font-size: 16px
-                margin-left: 60px
-                margin-top: 50px 
+                text-transform: uppercase
+                margin-left: 55px
+                margin-top: 50px
+            .text
+                font-size: 15px
+                margin: 50px 45px 0px 55px
+                line-height: 26px
                 i
-                    line-height: 26px 
+                    line-height: 26px
                     font-size: 26px
                     color: #5474fd
-            
-            
 
-        
-        
-
-
-
-
-                
+.bhromaon__bottom
+    background-color: #232323
+    &--wrapper
+        max-width: 1110px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        color: #ffffff
+        .title
+            text-transform: uppercase
+            @include josefin-bold
+            font-size: 24px
+            margin: 120px 0 15px 0
+            letter-spacing: 2.7px
+        .text
+            @include josefin-regular
+            font-size: 16px
+            letter-spacing: 1.2px
+        .social-icons
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            justify-content: center
+            align-items: center
+            .social-menu
+                list-style-type: none
+                margin: 30px 0 50px 0
+                .list
+                    list-style-type: none
+                    display: inline
+                    padding: 11px
+                    color: #ffffff
+                    text-transform: uppercase
+                    @include aleo
+                    font-size: 16px
+                    &:hover i
+                        color: #516fee
+                    &:active
+                        transform: scale(1.15)
+@import _media.sass

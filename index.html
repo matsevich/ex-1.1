@@ -12,16 +12,16 @@
     <title>Travel More</title>
 </head>
 <body>
-    <header class="first-section">
+    <header id="home" class="first-section">
         <div class="first-section__wrapper">
             <div class="first-section__conteiner">
                 <h1 class="title">Bhromaon</h1>
                 <p class="sub-title__text">Safe Travel Anywhere</p>
                 <form class="search-form" action="url">
-                    <input type="search" name="travel-search" placeholder="Search Your Travel Destination"><input type="button" value="Search">
+                    <input type="search" formaction="https://www.google.com.ua/" class="btn" name="travel-search" placeholder="Search Your Travel Destination"><input type="button" value="Search">
                 </form>
                 <div class="scroll-down">
-                    <a class="scroll" href="#">
+                    <a class="scroll" href="#trip-plan">
                         <p class="text">Scroll Down</p>
                         <img src="icon/angle-down-circle.svg" alt="angle-down">
                     </a>
@@ -33,17 +33,17 @@
                 <h2 class="bottom__title">Bhromaon</h2>
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="#">Who We Are</a></li>
-                        <li class="menu__item"><a href="#">What We Do</a></li>
-                        <li class="menu__item"><a href="#">Travel With Us</a></li>
-                        <li class="menu__item"><a href="#">Contact Us</a></li>
+                        <li class="menu__item"><a href="#home">Who We Are</a></li>
+                        <li class="menu__item"><a href="#why-us">What We Do</a></li>
+                        <li class="menu__item"><a href="#travel">Travel With Us</a></li>
+                        <li class="menu__item"><a href="#contact-us">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <main>
-        <section class="why-choose">
+        <section id="why-us" class="why-choose">
             <div class="why-choose__conteiner">
                 <div class="why-choose__wrapper">
                     <div class="description">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="why-choose__bottom">
+            <div id="trip-plan" class="why-choose__bottom">
                 <div class="why-choose__bottom--wrapper">
                     <div class="why-choose__bottom--icon">
                         <img src="icon/search-bot.svg" alt="serch-icon">
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="third-section">
+        <section id="travel" class="third-section">
             <div class="third-section__wrapper">
                 <div class="description__box">
                     <p class="country">Spain</p>
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <section class="last-section">
+        <section id="contact-us" class="last-section">
             <div class="last-section__wrapper">
                 <h2 class="title">What Our  Tourist Say</h2>
                 <div class="last-section__conteiner">
@@ -110,10 +110,16 @@
     </main>
     <footer class="bhromaon__bottom">
         <div class="bhromaon__bottom--wrapper">
-            <h2 class="title">Bhromaon</h2>
+            <h2 class="title"><a href="#home">Bhromaon</a></h2>
             <p class="text">Safe Travel Anywhere</p>
         <div class="social-icons">
-
+            <ul class="social-menu">
+                <li class="list"><a target="_blank" href="https://uk-ua.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="list"><a target="_blank" href="https://twitter.com/?lang=uk"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="list"><a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="list"><a target="_blank" href="https://www.youtube.com/?hl=uk&gl=UA"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li class="list"><a target="_blank" href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
         </div>
     </footer>
